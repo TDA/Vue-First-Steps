@@ -11,5 +11,8 @@
     "intro"
   ],
   "author": "Sai Pc",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "vue": "2.4.2"
+  }
 }
