@@ -9,15 +9,22 @@
     <script src="../node_modules/vue/dist/vue.min.js"></script>
 </head>
 <body>
+<h3>Just testing simple Hello World</h3>
 <div id="app">
     {{ message }}
 </div>
 
+<h3>Binding here</h3>
 <div id="app-2">
   <span v-bind:title="message">
     Hover your mouse over me for a few seconds
     to see my dynamically bound title!
   </span>
+</div>
+
+<h3>Conditionals</h3>
+<div id="app-3">
+    <p v-if="seen">Now you see me</p>
 </div>
 
 <script>
