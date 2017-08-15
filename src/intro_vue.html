@@ -25,6 +25,7 @@
 <h3>Conditionals</h3>
 <div id="app-3">
     <p v-if="seen">Now you see me</p>
+    <p v-if="!seen">Now you don't</p>
 </div>
 
 <script>
@@ -41,6 +42,13 @@
     el: '#app-2',
     data: {
       message: 'something else now'
+    }
+  });
+
+  var app3 = new Vue({
+    el: '#app-3',
+    data: {
+      seen: 'asdf'
     }
   });
 </script>
