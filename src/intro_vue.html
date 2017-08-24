@@ -62,7 +62,7 @@
             {{ todo }}
         </li>
     </ol>
-    <form v-on:submit="addTodo">
+    <form v-on:submit.prevent="addTodo">
         <input type="text" id="add-todo">
         <input type="submit" value="Add todo">
     </form>
@@ -121,6 +121,23 @@
     methods: {
       reverseMessage: function () {
         this.message = this.message.split('').reverse().join('')
+      }
+    }
+  });
+
+  var todoApp = new Vue({
+    el: '#todo-app',
+    data: {
+      todos: [
+        'hahaha',
+        'hohoho',
+        'hehehe'
+      ]
+    },
+    methods: {
+      addTodo: function () {
+        todo = $('#add-todo').val();
+        this.todos.push(todo);
       }
     }
   });
