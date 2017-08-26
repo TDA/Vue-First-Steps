@@ -63,7 +63,7 @@
         </li>
     </ol>
     <form v-on:submit.prevent="addTodo">
-        <input type="text" id="add-todo">
+        <input type="text" v-model="currentTodo">
         <input type="submit" value="Add todo">
     </form>
 </div>
@@ -128,6 +128,7 @@
   var todoApp = new Vue({
     el: '#todo-app',
     data: {
+      currentTodo: '',
       todos: [
         'hahaha',
         'hohoho',
@@ -136,8 +137,8 @@
     },
     methods: {
       addTodo: function () {
-        todo = $('#add-todo').val();
-        this.todos.push(todo);
+        this.todos.push(this.currentTodo);
+        this.currentTodo = '';
       }
     }
   });
